@@ -3,6 +3,8 @@ import { Link, graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import BackgroundSection from "../components/globals/BackgroundSection"
+import Info from "../components/Home/info"
 
 import { FaGulp } from "react-icons/fa"
 
@@ -12,7 +14,12 @@ const IndexPage = ({ data }) => (
     <h1>Hi people</h1>
     <p>Welcome to your new Gatsby site.</p>
     <p>Now go build something great.</p>
-    <FaGulp />
+    <BackgroundSection
+      img={data.img.childImageSharp.fluid}
+      title="Regular Coffee"
+      backgroundStyle="default-background"
+    />
+    <Info />
   </Layout>
 )
 // Gatsby Page Query
