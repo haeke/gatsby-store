@@ -50,6 +50,20 @@ export const query = graphql`
         }
       }
     }
+    products: allContentfulCoffeeProduct {
+      edges {
+        node {
+          id
+          title
+          price
+          image {
+            fluid(maxHeight: 420) {
+              ...GatsbyContentfulFixed_tracedSVG
+            }
+          }
+        }
+      }
+    }
   }
 `
 
