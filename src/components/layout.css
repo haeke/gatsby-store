@@ -59,7 +59,8 @@ h6 {
   color: var(--mainWhite);
 }
 
-.menu {
+.menu,
+.contact {
   background: var(--mainGray);
 }
 
