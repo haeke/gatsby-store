@@ -9,9 +9,6 @@ import Info from "../components/Home/info"
 const AboutPage = ({ data }) => (
   <Layout>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
     <BackgroundSection
       img={data.img.childImageSharp.fluid}
       title="About Our Coffee Shop"

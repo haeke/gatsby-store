@@ -8,7 +8,10 @@ const Contact = () => {
       <Title title="Contact Us" />
       <div className="row">
         <div className="col-10 col-sm-8 col-md-6 mx-auto">
-          <form>
+          <form
+            action="https://formspree.io/riverae2@student.wpunj.edu"
+            method="POST"
+          >
             {/* name */}
             <div className="formgroup">
               <label htmlFor="Name">Name</label>
