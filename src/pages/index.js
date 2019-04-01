@@ -6,6 +6,7 @@ import SEO from "../components/seo"
 import BackgroundSection from "../components/globals/BackgroundSection"
 import Info from "../components/Home/info"
 import Menu from "../components/Home/Menu"
+import Products from "../components/Home/Products"
 
 const IndexPage = ({ data }) => (
   <Layout>
@@ -20,6 +21,7 @@ const IndexPage = ({ data }) => (
     />
     <Info />
     <Menu items={data.menu} />
+    <Products />
   </Layout>
 )
 // Gatsby Page Query
@@ -44,20 +46,6 @@ export const query = graphql`
           category
           image {
             fixed(width: 50, height: 50) {
-              ...GatsbyContentfulFixed_tracedSVG
-            }
-          }
-        }
-      }
-    }
-    products: allContentfulCoffeeProduct {
-      edges {
-        node {
-          id
-          title
-          price
-          image {
-            fluid(maxHeight: 420) {
               ...GatsbyContentfulFixed_tracedSVG
             }
           }
