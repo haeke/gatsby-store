@@ -5,8 +5,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import BackgroundSection from "../components/globals/BackgroundSection"
 import Info from "../components/Home/info"
-
-import { FaGulp } from "react-icons/fa"
+import Menu from "../components/Home/Menu"
 
 const IndexPage = ({ data }) => (
   <Layout>
@@ -20,6 +19,7 @@ const IndexPage = ({ data }) => (
       backgroundStyle="default-background"
     />
     <Info />
+    <Menu items={data.menu} />
   </Layout>
 )
 // Gatsby Page Query
@@ -29,6 +29,24 @@ export const query = graphql`
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+    }
+    menu: allContentfulCoffeeItem {
+      edges {
+        node {
+          id
+          title
+          description {
+            description
+          }
+          price
+          category
+          image {
+            fixed(width: 50, height: 50) {
+              ...GatsbyContentfulFixed_tracedSVG
+            }
+          }
         }
       }
     }

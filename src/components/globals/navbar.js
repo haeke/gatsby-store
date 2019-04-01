@@ -17,7 +17,6 @@ const NavBar = () => {
       text: "about",
     },
   ]
-  console.log(links)
   const [navBarOpen, updateNavBar] = useState(false)
   const [cssClasses, updateCSSClasses] = useState("collapse navbar-collapse")
   const [navBarLinks, updateLinks] = useState(links)
