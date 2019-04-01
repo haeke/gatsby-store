@@ -21,9 +21,17 @@ const NavBar = () => {
   const [navBarOpen, updateNavBar] = useState(false)
   const [cssClasses, updateCSSClasses] = useState("collapse navbar-collapse")
   const [navBarLinks, updateLinks] = useState(links)
+
+  // toggle the navBarOpen boolean if the navBar is open
   function toggleNavBar() {
-    console.log("navbar open value: ", navBarOpen)
-    updateNavBar(!navBarOpen)
+    if (navBarOpen) {
+      updateNavBar(false)
+      // close the navbar
+      updateCSSClasses("collapse navbar-collapse")
+    } else {
+      updateNavBar(true)
+      updateCSSClasses("collapse navbar-collapse show")
+    }
   }
   return (
     <nav className="navbar navbar-expand-sm bg-light navbar-light">
@@ -49,6 +57,9 @@ const NavBar = () => {
               </Link>
             </li>
           ))}
+          <li className="nav-item ml-sm-5">
+            <FaCartArrowDown className="cart-icon" />
+          </li>
         </ul>
       </div>
     </nav>
