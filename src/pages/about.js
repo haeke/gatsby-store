@@ -4,7 +4,7 @@ import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import BackgroundSection from "../components/globals/BackgroundSection"
-import Info from "../components/Home/info"
+import Info from "../components/Home/Info"
 
 const AboutPage = ({ data }) => (
   <Layout>
