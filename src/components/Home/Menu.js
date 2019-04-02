@@ -5,12 +5,14 @@ import Title from "../globals/title"
 
 // We used a page query to get the list of edges returned from contentful.
 const Menu = ({ items }) => {
+  /// the list of items that we will display when we filter items
   const [menuItems, updateMenuItems] = useState(items.edges)
+  // the list of all the menu items
   const [allItems, updateAllItems] = useState(items.edges)
-  const [categories, updateCategories] = useState(items.edges)
+  // the filtered list of categories
+  const [categories, updateCategories] = useState(getCategories(items.edges))
   useEffect(() => {
     updateMenuItems(items.edges)
-    updateCategories(getCategories(categories))
   }, [items.edges])
 
   function getCategories(items) {
@@ -40,21 +42,20 @@ const Menu = ({ items }) => {
   }
 
   if (menuItems.length > 0) {
-    console.log(categories)
     return (
       <section className="menu py-5">
         <Title title="Menu Items" />
         {/* categories filter */}
         <div className="row">
           <div className="col mx-auto text-center">
-            {categories.map((category, index) => (
+            {categories.map((item, index) => (
               <button
                 type="button"
                 key={index}
                 className="btn btn-yellow text-capitalize m-3"
-                onClick={() => handleCategoryClick(category)}
+                onClick={() => handleCategoryClick(item)}
               >
-                Filter
+                {item}
               </button>
             ))}
           </div>
