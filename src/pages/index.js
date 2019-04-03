@@ -4,10 +4,10 @@ import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import BackgroundSection from "../components/globals/BackgroundSection"
-import Info from "../components/home/Info"
-import Menu from "../components/home/Menu"
-import Products from "../components/home/Products"
-import Contact from "../components/home/Contact"
+import Info from "../components/home/info"
+import Menu from "../components/home/menu"
+import Products from "../components/home/products"
+import Contact from "../components/home/contact"
 
 const IndexPage = ({ data }) => (
   <Layout>

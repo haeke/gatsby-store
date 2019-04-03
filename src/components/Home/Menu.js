@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react"
 import Image from "gatsby-image"
 
-import Title from "../globals/Title"
+import Title from "../globals/title"
 
 // We used a page query to get the list of edges returned from contentful.
 const Menu = ({ items }) => {

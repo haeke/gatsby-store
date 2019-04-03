@@ -1,6 +1,6 @@
 import React from "react"
 
-import Title from "../globals/Title"
+import Title from "../globals/title"
 
 const Contact = () => {
   return (
