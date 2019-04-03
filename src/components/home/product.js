@@ -18,7 +18,7 @@ const Product = ({ product }) => {
             data-item-image={product.image.fluid.src}
             data-item-price={product.price}
             data-item-description={product.title}
-            data-item-url="http://localhost"
+            data-item-url="https://stupefied-sammet-582369.netlify.com"
           >
             Add To Cart
           </button>
